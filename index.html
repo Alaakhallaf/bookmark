@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="Pacifico/Pacifico-Regular.ttf">
+   <link rel="stylesheet" href="Righteous/Righteous-Regular.ttf">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/all.min.css">
+   
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+   <div class="container p-5 ">
+    <div class="header"><h1 class="m-3  text-center">Bookmarker</h1></div>
+ <div class="box m-5">
+    <div class="text m-4 text-center">
+        <span><i class="fa-solid fa-bookmark"></i></span>
+        <span class="text-center hhh "> Bookmark your favorite sites </span>
+        <span><i class="fa-solid fa-bookmark"></i></span>
+    </div>
+
+   
+
+    <div class="form">
+     
+
+        <div class="mb-3 ">
+            <label for="name" class="form-label"><span><i class="fa-solid fa-book-bookmark mx-1"></i></span>Site Name</label>
+            <input type="text" oninput="validation()" class="form-control" id="name" placeholder="bookmark name">
+          </div>
+          <div class="mb-3">
+            <label for="url" class="form-label"><span class="mx-1"><i class="fa-solid fa-link"></i></span>Site URL</label>
+            <input oninput=" urlValidation()" type="url" class="form-control" id="url" placeholder="website URL">
+          </div>
+         <div class="submit d-flex justify-content-center text-center">
+            <button class="btn m-4 my-btn" onclick="Addwebs()">Submit</button>
+         </div>
+    </div> 
+ </div>
+
+
+ <table class=" table">
+
+<thead>
+    <th>index</th>
+    <th>Website name</th>
+    <th>Visit</th>
+    <th>Delete</th>
+</thead>
+<tbody id="tdata">
+  
+</tbody>
+ </table>
+   </div>
+<div  id="layer" class="layer d-none d-flex justify-content-center align-items-center position-fixed top-0 bottom-0 start-0 end-0 bg-black bg-opacity-50">
+    <div class="layerBox m-3 p-2 ">
+       <div class="sbtns d-flex justify-content-between">
+        <div class="circles">
+            <span class=" m-1  px-2  bg-danger my-circle"></span>
+            <span class=" m-1  px-2  my-circle"></span>
+            <span class=" m-1  px-2   my-circle"></span>
+        </div>
+        <button id="closeBtn" class="my-close"><i class="fa-solid fa-xmark my-icon"></i></button>
+       </div>
+       <header>
+        <p class="site">Site Name or Url is not valid, Please follow the rules below :</p>
+        <ol class="olli">
+            <li class="olli">
+                <i class="fa-regular fa-circle-right shm p-2"></i>
+                Site name must contain at least 3 characters
+            </li>
+            <li class="olli">
+                <i class="fa-regular fa-circle-right shm p-2"></i>
+                Site URL must be a valid one
+            </li>
+        </ol>
+       </header>
+    </div>
+</div>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
